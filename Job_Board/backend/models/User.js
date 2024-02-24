@@ -4,57 +4,54 @@ import Job from "./Job.js";
 
 // Create User model
 
-const UserSchema = new mongoose.Schema(
-  {
-    firstName: {
-      type: String,
-      required: [true, "First Name is Required"],
-    },
-    lastName: {
-      type: String,
-      required: [true, "First Name is Required"],
-    },
-    profilePhoto: {
-      type: String,
-      default:
-        "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png",
-    },
-    email: {
-      type: String,
-      required: [true, "Email is Required"],
-    },
-    bio: {
-      type: String,
-    },
-    password: {
-      type: String,
-      required: [true, "Password is Required"],
-    },
-    isAdmin: {
-      type: Boolean,
-      default: false,
-    },
-    role: {
-      type: String,
-      enum: ["admin", "guest", "blogger"],
-    },
-    jobApplied: {
-      type: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Job",
-        },
-      ],
-    },
-    toJSON: {
-      virtuals: true,
-    },
-    toObject: {
-      virtuals: true,
-    },
-    timestamps: true,
-  }
-);
+// Define UserSchema
+const UserSchema = new mongoose.Schema({
+  firstName: {
+    type: String,
+    required: [true, "First Name is Required"],
+  },
+  lastName: {
+    type: String,
+    required: [true, "First Name is Required"],
+  },
+  profilePhoto: {
+    type: String,
+    default:
+      "https://cdn.pixabay.com/photo/2016/11/08/15/21/user-1808597_640.png",
+  },
+  email: {
+    type: String,
+    required: [true, "Email is Required"],
+  },
+  bio: {
+    type: String,
+  },
+  password: {
+    type: String,
+    required: [true, "Password is Required"],
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
+  role: {
+    type: String,
+    enum: ["admin", "employer", "employee"],
+  },
+  jobApplied: {
+    type: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Job",
+      },
+    ],
+  },
+}, {
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true },
+  timestamps: true,
+});
+
 
 // SOME MIDDLEWARE
 

@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import dbConnect from "./config/dbConnection.js";
+import userRoute from "./routes/userRoutes.js";
 
 dotenv.config()
 const app = express();
@@ -11,4 +12,5 @@ app.use(express.json());
 app.use(cors());
 dbConnect()
 // ===== ROUTES =========
-app.listen(process.env.PORT || 5000, ()=> console.log("Server started 🔥🔥❤️"));
+app.use("/api/v1/user", userRoute)
+app.listen(process.env.PORT || 8080, ()=> console.log("Server started 🔥🔥❤️"));
