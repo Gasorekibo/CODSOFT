@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import User from "./User.js";
 
 const jobSchema = new mongoose.Schema({
+    category:{type:String, required:true},
     title: { type: String, required: true },
     company: { type: String, required: true },
     location: { type: String, required: false },

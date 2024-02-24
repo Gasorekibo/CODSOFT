@@ -60,9 +60,7 @@ const profilePhotoUploadCtrl = expressAsyncHandler(async (req, res) => {
     //Find the login user
   
     const { _id } = req.user;
-  
-    //block user
-  
+    validateMongodbId(_id)
     //1. Get the local path to img
     const localPath = `public/images/profiles/${req.file.filename}`;
     //2.Upload to cloudinary
