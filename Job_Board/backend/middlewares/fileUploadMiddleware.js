@@ -5,6 +5,7 @@ import multer from "multer";
 import sharp from "sharp";
 import path from "path";
 
+
 const multerStorage = multer.memoryStorage();
 
 const multerFilter = (req, file, cb) => {
@@ -16,7 +17,6 @@ const multerFilter = (req, file, cb) => {
     cb({ msg: "unsupport image format." }, false);
   }
 };
-
 // configure our middle ware
 
 const profilePhotoUploadMiddleware = multer({
@@ -45,8 +45,6 @@ const resizeImageMiddleware = expressAsyncHandler(async (req, res, next) => {
     next();
   }
 });
-
-
 
 
 

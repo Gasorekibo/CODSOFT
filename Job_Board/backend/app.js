@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import dbConnect from "./config/dbConnection.js";
 import userRoute from "./routes/userRoutes.js";
 import jobRoute from "./routes/jobRoutes.js";
+import applicationRoute from "./routes/applicationRoutes.js";
 
 dotenv.config()
 const app = express();
@@ -14,5 +15,6 @@ app.use(cors());
 dbConnect()
 // ===== ROUTES =========
 app.use("/api/v1/user", userRoute)
-app.use("/api/v1/job", jobRoute)
+app.use("/api/v1/job", jobRoute);
+app.use("/api/v1/job/apply", applicationRoute);
 app.listen(process.env.PORT || 8080, ()=> console.log("Server started 🔥🔥❤️"));
