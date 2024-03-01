@@ -18,7 +18,7 @@ export const sendEmail = async (to, messageContent) => {
       to: to,
       subject: "Verify your account",
       html: `
-            <h3>Message from Blog App to verify your Account</h3>
+            <h3>Job Board App</h3>
             <p>${messageContent}</p>
             `,
     };

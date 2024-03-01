@@ -1,7 +1,9 @@
 import Application from "../models/Application.js";
 import expressAsyncHandler from "express-async-handler";
+import { sendEmail } from "../utils/sendEmail.js";
 
 const createApplication = expressAsyncHandler(async (req, res) => {
+    console.log(req.user.email)
   try {
     const isApplicationExist = await Application.findOne({
       $and: [{ userId: req.user._id }, { jobId: req.body.jobId }],
@@ -14,6 +16,7 @@ const createApplication = expressAsyncHandler(async (req, res) => {
       cover: req.body.cover,
       resume: req.file.filename,
     });
+    sendEmail(req.user.email,"Your application have recieved successfully",)
     if (!application) throw new Error("Failed to add the application");
     res.status(201).json({
       message: "New application successfully",
