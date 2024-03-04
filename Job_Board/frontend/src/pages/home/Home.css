@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.container {
+  max-width: 1724px;
+  background-color: #ffffff;
+  margin: 0 9rem;
+  font-family: "Inter", Poppins, sans-serif;
+}
+
+.hero-section {
+  height: 100vh;
+  background-color: #d3e3e8;
+}
+.hero-section .hero-container {
+  padding: 5rem 20rem 14rem;
+}
+.hero-container h2 {
+  font-weight: 500;
+  font-size: 3.4rem;
+  line-height: 4rem;
+}
+
+.hero-container p {
+  opacity: 74%;
+  font-size: 2rem;
+}
+.hero-container button {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2.4rem;
+}
+
+.search {
+  width: 100%;
+  height: 5rem;
+  background-color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  box-shadow: 0px 10px 1px #bfdce4;
+}
+
+.search form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search input,
+.search select {
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  outline: none;
+  border: 3px solid #ccdce1;
+  color: #000000;
+  opacity: 51%;
+  font-weight: bold;
+}
+.search button {
+  background-color: #2062e2;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: none;
+  padding: 0.8rem 1.7rem;
+  border-radius: 2.4rem;
+  cursor: pointer;
+}
+.search .search-for-jobs {
+  position: relative;
+}
+
+.search .search-for-jobs .icon {
+  position: relative;
+  left: -30px;
+  top: 3px;
+  cursor: pointer;
+}
+
+.search ::placeholder {
+  color: #000000;
+  opacity: 70%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.container h2 {
+  text-align: center;
+  opacity: 50%;
+}
+
+.container .job-section {
+  width: 20rem;
+  padding: 0.6rem 1rem;
+}
+.job-section {
+  width: 100% !important;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.job-card {
+  cursor: pointer;
+  padding-top: 3px;
+  border-radius: 0.9rem;
+  background-color: #2062e2;
+  color: white;
+  box-shadow: 0px 10px 10px rgb(194, 190, 190);
+}
+.job-card .job-card-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.job-card .job-card-info span {
+  display: inline-block;
+  line-height: 0.2px;
+}
+.job-card .job-card-info span p {
+  font-size: 0.9rem;
+  color: #6993e6;
+  font-weight: bolder;
+}
+
+.job-card-detail {
+  text-align: left;
+}
+.job-card-detail h3 {
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 0.9rem;
+  color: #fff;
+}
+.job-card-detail p {
+  padding: 0 0.4rem;
+  color: #ffff;
+  font-size: 0.9rem;
+}
+.job-card-detail button {
+  margin: 0.5rem 0.7rem 1rem 1rem;
+  background-color: #ffffff;
+  color: #18408e;
+  font-weight: bold;
+  padding: 0.8rem 1.6rem;
+  margin-left: 40%;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.container.subscribe {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+}
+
+.subscribe-info {
+  width: 50%;
+  text-align: left;
+}
+
+.subscribe-info h4 {
+  text-align: center;
+  color: #2062e2;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1px;
+}
+.subscribe-info p {
+  color: #000000;
+  font-size: 1rem;
+  line-height: auto;
+}
+
+.subscribe-form {
+  margin-left: 3rem;
+  width: 50%;
+  text-align: left;
+}
+.subscribe-form input,
+.subscribe-form button {
+  position: relative;
+  top: 50%;
+}
+
+.subscribe-form input {
+  padding: 1rem 5rem;
+  border: 1px solid #000000;
+  opacity: 54%;
+  border-radius: 60px;
+  text-align: start;
+}
+.subscribe-form input::placeholder {
+  color: #000000;
+  opacity: 54%;
+  font-weight: bold;
+
+}
+.subscribe-form button {
+  position: relative;
+  left: -6rem;
+  padding: 0.5rem 0.6rem;
+  background-color: #2062e2;
+  border-radius: 60px;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+}
